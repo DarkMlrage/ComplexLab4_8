@@ -40,9 +40,6 @@ public class BouquetMenu extends MainMenu {
         newComm = new FindStalkLengthCommand(bouquet);
         items.put(newComm.getKey(), newComm);
 
-        newComm = new BackCommand();
-        items.put(newComm.getKey(), newComm);
-
         return items;
     }
 }

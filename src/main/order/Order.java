@@ -31,7 +31,6 @@ public class Order {
         this.bouquets = bouquets;
     }
 
-
     public double getCost() {
         return cost;
     }

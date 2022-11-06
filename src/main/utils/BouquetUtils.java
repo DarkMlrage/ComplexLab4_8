@@ -50,7 +50,6 @@ public class BouquetUtils {
                 type = scanner.nextLine();
             }
         }
-
     }
 
     public static Accessory createAccessory(String type, Color color) {

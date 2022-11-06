@@ -20,8 +20,8 @@ public class PayOrderCommand implements Command {
     public void execute(List<String> params) {
         OrderUtils.payOrder(order);
         OrderUtils.saveCheck(order);
-        System.out.println("Thanks for purchase!");
         OrderUtils.saveOrder(order);
         OrderUtils.cancelOrder(order);
+        System.out.println("Thanks for purchase!");
     }
 }

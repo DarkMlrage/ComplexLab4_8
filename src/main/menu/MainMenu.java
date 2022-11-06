@@ -17,13 +17,13 @@ public class MainMenu {
         help = initializeHelp();
     }
 
-    public List<String> initializeHelp() {
+    protected List<String> initializeHelp() {
         List<String> initialize = new ArrayList<>();
         menuItems.forEach((k, v) -> initialize.add(k + v.getParams()));
         return initialize;
     }
 
-    public HashMap<String, Command> initializeMenu() {
+    protected HashMap<String, Command> initializeMenu() {
 
         HashMap<String, Command> items = new HashMap<>();
 

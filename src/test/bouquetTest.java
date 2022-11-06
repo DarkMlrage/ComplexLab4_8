@@ -1,16 +1,14 @@
 package test;
 
 import main.bouquets.Bouquet;
-import main.flowers.Flower;
-import main.flowers.Freshness;
-import main.flowers.RedRose;
+import main.flowers.*;
 import org.junit.jupiter.api.*;
 
 
 public class bouquetTest {
     private final Flower fl1 = new RedRose(Freshness.FullFresh, 10);
-    private final Flower fl2 = new RedRose(Freshness.MidFresh, 10);
-    private final Flower fl3 = new RedRose(Freshness.OldFresh, 10);
+    private final Flower fl2 = new WhiteRose(Freshness.MidFresh, 10);
+    private final Flower fl3 = new YellowTulip(Freshness.OldFresh, 10);
     @Test
     public void sortFlowersByFreshTest(){
 

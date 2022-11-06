@@ -3,258 +3,216 @@
   <ID>JAVA</ID>
   <OriginalElement>menu.MainMenu</OriginalElement>
   <nodes>
-    <node x="-329.0000000000002" y="640.0">utils.BouquetUtils</node>
-    <node x="853.1613696629827" y="557.8738766626361">menu.bouquetmenu.AddFlowerToBouquetCommand</node>
-    <node x="445.44422572178564" y="588.0">order.Order</node>
-    <node x="251.20669291338572" y="-222.0">flowers.Flower</node>
-    <node x="1025.2499999999998" y="771.0">menu.bouquetmenu.BouquetMenu</node>
-    <node x="324.4999999999998" y="457.5">flowers.RedRose</node>
-    <node x="1319.3773930343048" y="679.5">menu.bouquetmenu.BackCommand</node>
-    <node x="-496.0000000000002" y="214.5">accessories.Foil</node>
-    <node x="707.5816929133857" y="110.0">bouquets.Bouquet</node>
-    <node x="-101.29330708661428" y="-466.0">accessories.Color</node>
-    <node x="1281.8316929133857" y="214.5">menu.Command</node>
-    <node x="188.45669291338572" y="201.5">flowers.Rose</node>
-    <node x="-105.50000000000023" y="457.5">flowers.YellowTulip</node>
-    <node x="-926.0" y="214.5">accessories.Strip</node>
-    <node x="247.20669291338572" y="-453.0">flowers.Freshness</node>
-    <node x="-711.0" y="214.5">accessories.Bow</node>
-    <node x="-257.7322834645671" y="201.5">flowers.Tulip</node>
-    <node x="-97.29330708661428" y="-183.0">accessories.Accessory</node>
-    <node x="-320.5000000000002" y="457.5">flowers.BlackTulip</node>
-    <node x="779.1380834880536" y="888.0">menu.AddBouquetMenuCommand</node>
-    <node x="1454.3415354330718" y="1030.0">menu.MainMenu</node>
-    <node x="109.49999999999977" y="457.5">flowers.WhiteRose</node>
-    <node x="1514.3415354330718" y="1170.0">Main</node>
-    <node x="1493.7759186351714" y="457.5">menu.ExitCommand</node>
+    <node x="311.2060695369256" y="-376.1873280457752">flowers.Freshness</node>
+    <node x="-414.3281022938281" y="27.271016307399407">accessories.Accessory</node>
+    <node x="-925.7263530512698" y="19.881121629043946">accessories.Strip</node>
+    <node x="-254.95616841382594" y="442.21762834534775">flowers.BlackTulip</node>
+    <node x="395.6468666270912" y="226.7255597779182">flowers.RedRose</node>
+    <node x="392.3141208823404" y="354.0026560170243">order.Order</node>
+    <node x="1295.6607389593098" y="417.476721283693">menu.ExitCommand</node>
+    <node x="-502.147105467251" y="307.38402785193256">accessories.Foil</node>
+    <node x="-424.37066328356093" y="-305.5607236282383">accessories.Color</node>
+    <node x="166.68374173980828" y="-147.2657818305321">flowers.Flower</node>
+    <node x="1256.6583194189584" y="826.6864260933627">menu.MainMenu</node>
+    <node x="5.6593312374919265" y="534.2537973016684">flowers.YellowTulip</node>
+    <node x="-755.6538033865454" y="-339.1283629434888">menu.LOL</node>
+    <node x="81.11076242481369" y="211.6163729826839">flowers.Rose</node>
+    <node x="1182.7135882093266" y="654.849823824731">menu.bouquetmenu.BouquetMenu</node>
+    <node x="961.4912735857381" y="415.1693323408449">menu.Command</node>
+    <node x="855.4014615451116" y="620.4612308214267">menu.bouquetmenu.BackCommand</node>
+    <node x="-782.5365954350002" y="464.4997586374156">utils.BouquetUtils</node>
+    <node x="977.8537431885704" y="897.2079460013433">Main</node>
+    <node x="130.40112190694072" y="362.49484255437136">flowers.WhiteRose</node>
+    <node x="653.1049764132943" y="-159.52242746026576">bouquets.Bouquet</node>
+    <node x="-229.9890300341583" y="289.2530189202316">flowers.Tulip</node>
+    <node x="588.199345920862" y="770.2106974199478">menu.AddBouquetMenuCommand</node>
+    <node x="-670.1664267351871" y="124.19964944995297">accessories.Bow</node>
   </nodes>
   <notes />
   <edges>
     <edge source="menu.MainMenu" target="menu.ExitCommand" relationship="CREATE">
-      <point x="36.866517771281224" y="-10.122824667472742" />
-      <point x="1656.708053204353" y="640.125" />
-      <point x="1656.708053204353" y="515.7283869407497" />
-      <point x="29.4321345691817" y="26.728386940749715" />
+      <point x="152.05526879036825" y="-97.0" />
+      <point x="1602.2135882093266" y="461.976721283693" />
+      <point x="133.5" y="0.0" />
     </edge>
     <edge source="utils.BouquetUtils" target="flowers.YellowTulip" relationship="CREATE">
-      <point x="0.0" y="-71.0" />
-      <point x="-115.50000000000023" y="561.0" />
-      <point x="-8.000000000000227" y="561.0" />
-      <point x="0.0" y="31.5" />
+      <point x="233.5" y="6.254241362584423" />
+      <point x="-97.5" y="15.000202698331577" />
     </edge>
     <edge source="accessories.Strip" target="accessories.Accessory" relationship="GENERALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="-828.5" y="90.0" />
-      <point x="-613.5" y="90.0" />
-      <point x="-613.5" y="80.0" />
-      <point x="-42.54330708661428" y="80.0" />
-      <point x="-54.75" y="97.0" />
+      <point x="3.5305126982621005E-4" y="31.499878370956054" />
+      <point x="-828.226" y="104.0" />
+      <point x="-457.666" y="104.0" />
+      <point x="-457.666" y="131.7" />
+      <point x="-109.49989770617185" y="7.428983692600596" />
     </edge>
     <edge source="flowers.BlackTulip" target="flowers.Tulip" relationship="GENERALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="-223.00000000000023" y="423.0" />
-      <point x="-132.2322834645671" y="423.0" />
-      <point x="0.0" y="44.5" />
+      <point x="97.50016841382593" y="3.7165465226962624E-4" />
+      <point x="-27.0" y="473.718" />
+      <point x="-27.0" y="424.718" />
+      <point x="-104.489" y="424.718" />
+      <point x="3.0034158299940827E-5" y="44.49998107976839" />
     </edge>
     <edge source="utils.BouquetUtils" target="flowers.BlackTulip" relationship="CREATE">
-      <point x="0.0" y="-71.0" />
-      <point x="-115.50000000000023" y="561.0" />
-      <point x="-223.00000000000023" y="561.0" />
-      <point x="0.0" y="31.5" />
+      <point x="233.5" y="-100.78213029206785" />
+      <point x="-97.5" y="0.0" />
     </edge>
     <edge source="menu.MainMenu" target="order.Order" relationship="CREATE">
-      <point x="-155.76125490102845" y="0.7293252720678538" />
-      <point x="1419.382123337364" y="1075.7293252720679" />
-      <point x="1419.382123337364" y="1075.0" />
-      <point x="534.4858923884522" y="1075.0" />
-      <point x="534.4858923884522" y="866.0" />
-      <point x="534.9971559854897" y="866.0" />
-      <point x="-75.94706973629593" y="121.8724546553808" />
+      <point x="-193.5" y="54.02151990798063" />
+      <point x="570.699345920862" y="977.7079460013433" />
+      <point x="-23.11477496147836" y="161.99999999999994" />
     </edge>
     <edge source="menu.bouquetmenu.BouquetMenu" target="menu.bouquetmenu.BackCommand" relationship="CREATE">
-      <point x="0.0" y="-31.5" />
-      <point x="1158.7499999999998" y="721.7718403869408" />
-      <point x="-134.86843535594926" y="10.771840386940767" />
+      <point x="-193.5" y="-34.88859300330421" />
+      <point x="133.4999999999999" y="0.0" />
     </edge>
     <edge source="bouquets.Bouquet" target="accessories.Accessory" relationship="TO_MANY">
-      <point x="0.0" y="-136.0" />
-      <point x="893.0816929133857" y="80.0" />
-      <point x="66.95669291338572" y="80.0" />
-      <point x="54.75" y="97.0" />
+      <point x="0.0" y="-188.0" />
+      <point x="858.6049764132943" y="-393.6873280457752" />
+      <point x="-44.489000000000004" y="-393.6873280457752" />
+      <point x="-44.489000000000004" y="124.2710163073994" />
+      <point x="109.5" y="0.0" />
     </edge>
     <edge source="menu.AddBouquetMenuCommand" target="order.Order" relationship="TO_ONE">
-      <point x="-127.14470984839204" y="5.877175332527145" />
-      <point x="693.6942257217856" y="938.8771753325271" />
-      <point x="82.75" y="123.0" />
+      <point x="0.0" y="-58.0" />
+      <point x="142.38522503852164" y="161.99999999999994" />
     </edge>
     <edge source="utils.BouquetUtils" target="accessories.Strip" relationship="CREATE">
-      <point x="0.0" y="-71.0" />
-      <point x="-115.50000000000023" y="561.0" />
-      <point x="-828.5" y="561.0" />
-      <point x="0.0" y="31.5" />
-    </edge>
-    <edge source="flowers.RedRose" target="flowers.Rose" relationship="GENERALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="421.9999999999998" y="423.0" />
-      <point x="317.5932769044739" y="423.0" />
-      <point x="3.636583991088173" y="46.6882321644498" />
-    </edge>
-    <edge source="menu.MainMenu" target="menu.AddBouquetMenuCommand" relationship="CREATE">
-      <point x="-110.33333333333326" y="-45.0" />
-      <point x="1509.5082020997386" y="1009.0" />
-      <point x="927.1380834880536" y="1009.0" />
-      <point x="0.0" y="45.0" />
+      <point x="-233.5" y="0.0" />
+      <point x="-843.226" y="574.4997586374157" />
+      <point x="-14.999646948730174" y="31.5" />
     </edge>
     <edge source="menu.AddBouquetMenuCommand" target="menu.bouquetmenu.BouquetMenu" relationship="CREATE">
-      <point x="55.634695230205125" y="-38.820981862152394" />
-      <point x="982.7727787182587" y="856.0" />
-      <point x="1091.9999999999998" y="856.0" />
-      <point x="-66.75" y="31.5" />
+      <point x="148.0" y="-19.024271326585108" />
+      <point x="1376.2135882093266" y="809.1864260933627" />
+      <point x="0.0" y="45.0" />
+    </edge>
+    <edge source="flowers.RedRose" target="flowers.Rose" relationship="GENERALIZATION">
+      <point x="1.333729088059954E-4" y="31.500440222081806" />
+      <point x="493.147" y="328.0" />
+      <point x="206.611" y="328.0" />
+      <point x="2.3757518630418417E-4" y="44.4996270173161" />
+    </edge>
+    <edge source="menu.MainMenu" target="menu.AddBouquetMenuCommand" relationship="CREATE">
+      <point x="-193.5" y="-89.5" />
+      <point x="148.0" y="5.975728673414892" />
     </edge>
     <edge source="order.Order" target="bouquets.Bouquet" relationship="TO_MANY">
-      <point x="0.0" y="-123.0" />
-      <point x="610.9442257217856" y="403.0" />
-      <point x="745.4468488512696" y="403.0" />
-      <point x="-147.63484406211614" y="135.6494993954051" />
+      <point x="66.79085553095388" y="-162.0" />
+      <point x="-198.0" y="188.0" />
     </edge>
     <edge source="accessories.Foil" target="accessories.Accessory" relationship="GENERALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="-398.5000000000002" y="90.0" />
-      <point x="-613.5" y="90.0" />
-      <point x="-613.5" y="80.0" />
-      <point x="-42.54330708661428" y="80.0" />
-      <point x="-54.75" y="97.0" />
+      <point x="-97.49989453274901" y="-2.7851932571820726E-5" />
+      <point x="-693.0" y="338.884" />
+      <point x="-693.0" y="104.0" />
+      <point x="-457.666" y="104.0" />
+      <point x="-457.666" y="131.7" />
+      <point x="-109.49989770617185" y="7.428983692600596" />
     </edge>
     <edge source="utils.BouquetUtils" target="accessories.Foil" relationship="CREATE">
-      <point x="0.0" y="-71.0" />
-      <point x="-115.50000000000023" y="561.0" />
-      <point x="-398.5000000000002" y="561.0" />
+      <point x="144.38948996774923" y="-110.0" />
       <point x="0.0" y="31.5" />
     </edge>
     <edge source="utils.BouquetUtils" target="flowers.WhiteRose" relationship="CREATE">
-      <point x="0.0" y="-71.0" />
-      <point x="-115.50000000000023" y="561.0" />
-      <point x="206.99999999999977" y="561.0" />
+      <point x="233.5" y="40.254038664252846" />
+      <point x="227.90112190694072" y="614.7537973016684" />
       <point x="0.0" y="31.5" />
     </edge>
     <edge source="menu.bouquetmenu.BouquetMenu" target="menu.MainMenu" relationship="GENERALIZATION">
-      <point x="66.75" y="31.5" />
-      <point x="1225.4999999999998" y="866.0" />
-      <point x="1619.8415354330718" y="866.0" />
-      <point x="0.0" y="-45.0" />
-    </edge>
-    <edge source="menu.bouquetmenu.BouquetMenu" target="menu.bouquetmenu.AddFlowerToBouquetCommand" relationship="CREATE">
-      <point x="0.0" y="-31.5" />
-      <point x="1158.7499999999998" y="695.625" />
-      <point x="1023.1613696629827" y="695.625" />
-      <point x="0.0" y="45.0" />
-    </edge>
-    <edge source="flowers.Rose" target="flowers.Flower" relationship="GENERALIZATION">
-      <point x="0.0" y="-44.5" />
-      <point x="-62.75" y="136.0" />
+      <point x="73.94473120963175" y="45.0" />
+      <point x="0.0" y="-97.0" />
     </edge>
     <edge source="bouquets.Bouquet" target="flowers.Flower" relationship="TO_MANY">
-      <point x="0.0" y="-136.0" />
-      <point x="893.0816929133857" y="80.0" />
-      <point x="439.4566929133857" y="80.0" />
-      <point x="62.75" y="136.0" />
+      <point x="-205.5" y="-26.74335437026633" />
+      <point x="125.5" y="0.0" />
+    </edge>
+    <edge source="flowers.Rose" target="flowers.Flower" relationship="GENERALIZATION">
+      <point x="2.3757518630418417E-4" y="-44.50037298268391" />
+      <point x="206.611" y="182.0" />
+      <point x="292.184" y="182.0" />
+      <point x="2.582601917424654E-4" y="148.9997818305321" />
     </edge>
     <edge source="menu.MainMenu" target="menu.Command" relationship="TO_MANY">
-      <point x="110.33333333333326" y="-45.0" />
-      <point x="1730.174868766405" y="941.9527642079806" />
-      <point x="1771.2759186351714" y="941.9527642079806" />
-      <point x="1771.2759186351714" y="413.0" />
-      <point x="1482.0816929133857" y="413.0" />
-      <point x="66.75" y="31.5" />
+      <point x="167.05526879036825" y="-97.0" />
+      <point x="1617.2135882093266" y="208.97757253973424" />
+      <point x="1094.991273585738" y="208.97757253973424" />
+      <point x="0.0" y="-57.5" />
     </edge>
     <edge source="flowers.Tulip" target="flowers.Flower" relationship="GENERALIZATION">
-      <point x="0.0" y="-44.5" />
-      <point x="-132.2322834645671" y="90.0" />
-      <point x="313.9566929133857" y="90.0" />
-      <point x="-62.75" y="136.0" />
+      <point x="3.0034158299940827E-5" y="-44.50001892023161" />
+      <point x="-104.489" y="182.0" />
+      <point x="292.184" y="182.0" />
+      <point x="2.582601917424654E-4" y="148.9997818305321" />
     </edge>
     <edge source="accessories.Accessory" target="accessories.Color" relationship="TO_ONE">
-      <point x="0.0" y="-97.0" />
-      <point x="0.0" y="97.0" />
-    </edge>
-    <edge source="menu.bouquetmenu.AddFlowerToBouquetCommand" target="menu.Command" relationship="REALIZATION">
-      <point x="85.0" y="-45.0" />
-      <point x="1108.1613696629827" y="423.0" />
-      <point x="1348.5816929133857" y="423.0" />
-      <point x="-66.75" y="31.5" />
+      <point x="21.957439010267194" y="-97.0" />
+      <point x="0.0" y="136.0" />
     </edge>
     <edge source="flowers.WhiteRose" target="flowers.Rose" relationship="GENERALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="206.99999999999977" y="423.0" />
-      <point x="317.5932769044739" y="423.0" />
-      <point x="3.636583991088173" y="45.62399032648125" />
+      <point x="-1.2190694070568497E-4" y="-31.499842554371355" />
+      <point x="227.901" y="328.0" />
+      <point x="206.611" y="328.0" />
+      <point x="2.3757518630418417E-4" y="44.4996270173161" />
     </edge>
     <edge source="Main" target="menu.MainMenu" relationship="CREATE">
-      <point x="0.0" y="-31.5" />
-      <point x="0.0" y="45.0" />
+      <point x="105.5" y="-5.0215199079806325" />
+      <point x="-193.5" y="0.0" />
     </edge>
     <edge source="accessories.Bow" target="accessories.Accessory" relationship="GENERALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="-613.5" y="80.0" />
-      <point x="-42.54330708661428" y="80.0" />
-      <point x="-54.75" y="97.0" />
+      <point x="4.267351870339553E-4" y="-31.49964944995297" />
+      <point x="-572.666" y="104.0" />
+      <point x="-457.666" y="104.0" />
+      <point x="-457.666" y="131.7" />
+      <point x="-109.49989770617185" y="7.428983692600596" />
     </edge>
     <edge source="utils.BouquetUtils" target="accessories.Bow" relationship="CREATE">
-      <point x="0.0" y="-71.0" />
-      <point x="-115.50000000000023" y="561.0" />
-      <point x="-613.5" y="561.0" />
+      <point x="-23.62983130018688" y="-110.0" />
       <point x="0.0" y="31.5" />
     </edge>
     <edge source="menu.ExitCommand" target="menu.Command" relationship="REALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="1627.2759186351714" y="423.0" />
-      <point x="1348.5816929133857" y="423.0" />
-      <point x="-66.75" y="31.5" />
+      <point x="2.610406902476825E-4" y="44.50027871630698" />
+      <point x="1429.161" y="576.0" />
+      <point x="1094.991" y="576.0" />
+      <point x="-2.7358573811397946E-4" y="57.49966765915508" />
     </edge>
     <edge source="menu.AddBouquetMenuCommand" target="bouquets.Bouquet" relationship="CREATE">
-      <point x="-1.1368683772161603E-13" y="-45.0" />
-      <point x="831.8884389898669" y="888.0" />
-      <point x="831.8884389898669" y="895.44969286578" />
-      <point x="800.3316929133857" y="895.44969286578" />
-      <point x="-92.75" y="136.0" />
+      <point x="101.70211562424959" y="-58.0" />
+      <point x="-20.70351486818265" y="188.0" />
     </edge>
     <edge source="menu.bouquetmenu.BackCommand" target="menu.Command" relationship="REALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="1452.8773930343048" y="422.9454413542926" />
-      <point x="1348.5816929133857" y="422.9454413542926" />
-      <point x="-66.75" y="31.5" />
-    </edge>
-    <edge source="menu.bouquetmenu.AddFlowerToBouquetCommand" target="bouquets.Bouquet" relationship="TO_ONE">
-      <point x="-85.0" y="-45.0" />
-      <point x="938.1613696629827" y="413.0" />
-      <point x="939.1388633615477" y="413.0" />
-      <point x="46.05717044816197" y="129.26404836759372" />
+      <point x="-4.6154511164786527E-4" y="-44.500230821426726" />
+      <point x="988.901" y="576.0" />
+      <point x="1094.991" y="576.0" />
+      <point x="-2.7358573811397946E-4" y="57.49966765915508" />
     </edge>
     <edge source="flowers.Flower" target="flowers.Freshness" relationship="TO_ONE">
-      <point x="0.0" y="-136.0" />
-      <point x="0.0" y="84.0" />
+      <point x="26.522327797117327" y="-149.0" />
+      <point x="-122.0" y="84.0" />
     </edge>
     <edge source="menu.AddBouquetMenuCommand" target="menu.Command" relationship="REALIZATION">
-      <point x="-95.21745470933524" y="-19.66462877871834" />
-      <point x="831.9206287787183" y="423.0" />
-      <point x="1348.5816929133857" y="423.0" />
-      <point x="-66.75" y="31.5" />
+      <point x="82.30065407913798" y="-57.99969741994778" />
+      <point x="818.5" y="576.0" />
+      <point x="1094.991" y="576.0" />
+      <point x="-2.7358573811397946E-4" y="57.49966765915508" />
     </edge>
     <edge source="utils.BouquetUtils" target="flowers.RedRose" relationship="CREATE">
-      <point x="0.0" y="-71.0" />
-      <point x="-115.50000000000023" y="561.0" />
-      <point x="421.9999999999998" y="561.0" />
-      <point x="0.0" y="31.5" />
+      <point x="233.5" y="55.254038664252846" />
+      <point x="364.6107624248137" y="629.7537973016684" />
+      <point x="364.6107624248137" y="258.2255597779182" />
+      <point x="-97.5" y="0.0" />
     </edge>
     <edge source="flowers.YellowTulip" target="flowers.Tulip" relationship="GENERALIZATION">
-      <point x="0.0" y="-31.5" />
-      <point x="-8.000000000000227" y="423.0" />
-      <point x="-132.2322834645671" y="423.0" />
-      <point x="0.0" y="44.5" />
+      <point x="-97.50033123749192" y="2.026983315772668E-4" />
+      <point x="-27.0" y="565.754" />
+      <point x="-27.0" y="424.718" />
+      <point x="-104.489" y="424.718" />
+      <point x="3.0034158299940827E-5" y="44.49998107976839" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.4810936591041304" showDependencies="true" x="348.11049576783626" y="431.76593954050793" />
-  <SelectedNodes />
+  <settings layout="Hierarchic" zoom="0.5790940766550523" showDependencies="true" x="369.0" y="234.5" />
+  <SelectedNodes>
+    <node>menu.LOL</node>
+  </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
     <Category>Methods</Category>

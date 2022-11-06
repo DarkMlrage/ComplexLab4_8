@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class AddBouquetMenuCommand implements Command {
     private final Order order;
-
+    protected BouquetMenu menu;
     public AddBouquetMenuCommand(Order order) {
         this.order = order;
     }
@@ -26,7 +26,7 @@ public class AddBouquetMenuCommand implements Command {
     public void execute(List<String> params) {
         Bouquet obj = new Bouquet();
 
-        BouquetMenu menu = new BouquetMenu(obj);
+        menu = new BouquetMenu(obj);
         Scanner scanner = new Scanner(System.in);
 
         System.out.println(" _Create your bouquet_ ");
