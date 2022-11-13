@@ -1,4 +1,4 @@
-package test;
+package test.menu;
 
 import main.bouquets.Bouquet;
 import main.flowers.Freshness;
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class commandTest {
+public class GlobalCommandTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final PrintStream originalOut = System.out;
 

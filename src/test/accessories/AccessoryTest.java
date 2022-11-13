@@ -1,10 +1,10 @@
-package test;
+package test.accessories;
 
 import main.accessories.Color;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class accessoryTest {
+public class AccessoryTest {
     @Test
     public void getColorByNameTest(){
         Color expected =  Color.valueOf("RED");
