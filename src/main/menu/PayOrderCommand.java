@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.logger.Log;
 import main.order.Order;
 import main.utils.OrderUtils;
 
@@ -23,5 +24,6 @@ public class PayOrderCommand implements Command {
         OrderUtils.saveOrder(order);
         OrderUtils.cancelOrder(order);
         System.out.println("Thanks for purchase!");
+        Log.logInfo(this.getClass(), "order payed");
     }
 }

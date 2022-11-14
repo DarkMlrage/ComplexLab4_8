@@ -1,6 +1,7 @@
 package main.menu.bouquetmenu;
 
 import main.bouquets.Bouquet;
+import main.logger.Log;
 import main.menu.Command;
 
 import java.util.List;
@@ -22,7 +23,12 @@ public class DelFlowerCommand implements Command {
     }
     @Override
     public void execute(List<String> params) {
-        bouquet.getFlowers().remove(Integer.parseInt(params.get(0))-1);
-        System.out.println("Flower deleted from bouquet");
+        if (Integer.parseInt(params.get(0))-1 < bouquet.getFlowers().size()) {
+            bouquet.getFlowers().remove(Integer.parseInt(params.get(0)) - 1);
+            System.out.println("Flower deleted from bouquet");
+        } else {
+            Log.logMail("Flower index out of range");
+            System.out.println("Error");
+        }
     }
 }

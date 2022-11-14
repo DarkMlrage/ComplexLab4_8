@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.logger.Log;
 import main.order.Order;
 
 import java.util.List;
@@ -21,7 +22,12 @@ public class DeleteBouquetCommand implements Command {
     }
     @Override
     public void execute(List<String> params) {
-        order.delBouquet(Integer.parseInt(params.get(0)));
-        System.out.println("Bouquet Deleted From Order");
+        if (Integer.parseInt(params.get(0))-1 < order.getBouquets().size()) {
+            order.delBouquet(Integer.parseInt(params.get(0))-1);
+            System.out.println("Bouquet Deleted From Order");
+        } else {
+            Log.logMail("Bouquets index out of range");
+            System.out.println("Error");
+        }
     }
 }

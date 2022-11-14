@@ -1,6 +1,7 @@
 package main.menu.bouquetmenu;
 
 import main.bouquets.Bouquet;
+import main.logger.Log;
 import main.menu.Command;
 
 import java.util.List;
@@ -22,8 +23,12 @@ public class DelAccessoryCommand implements Command {
     }
     @Override
     public void execute(List<String> params) {
-        bouquet.getAccessories().remove(Integer.parseInt(params.get(0))-1);
-        System.out.println("Accessory deleted from bouquet");
+        if (Integer.parseInt(params.get(0))-1 < bouquet.getAccessories().size()) {
+            bouquet.getAccessories().remove(Integer.parseInt(params.get(0))-1);
+            System.out.println("Accessory deleted from bouquet");
+        } else {
+            Log.logMail("Accessories index out of range");
+            System.out.println("Error");
+        }
     }
 }
-

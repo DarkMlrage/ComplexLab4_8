@@ -1,6 +1,9 @@
 package main;
 
+import main.logger.Log;
 import main.menu.MainMenu;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,8 +11,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
+        PropertyConfigurator.configure("log4j.properties");
 
         Scanner scanner = new Scanner(System.in);
 
