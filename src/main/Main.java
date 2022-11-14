@@ -17,7 +17,6 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         MainMenu mainMenu = new MainMenu();
-
         while (true) {
             System.out.println("  __ Main Menu __");
             System.out.println("Input your command: ");

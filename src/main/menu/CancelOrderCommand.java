@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.logger.Log;
 import main.order.Order;
 import main.utils.OrderUtils;
 
@@ -19,6 +20,7 @@ public class CancelOrderCommand implements Command {
     @Override
     public void execute(List<String> params) {
         OrderUtils.cancelOrder(order);
-        System.out.println("Your main.order was canceled");
+        Log.logInfo(this.getClass(), "Order Canceled");
+        System.out.println("Your order was canceled");
     }
 }

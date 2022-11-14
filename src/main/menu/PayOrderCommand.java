@@ -23,6 +23,7 @@ public class PayOrderCommand implements Command {
         OrderUtils.saveCheck(order);
         OrderUtils.saveOrder(order);
         OrderUtils.cancelOrder(order);
+        Log.logInfo(this.getClass(), "Order payed, Check gived, Order saved, Order canceled");
         System.out.println("Thanks for purchase!");
         Log.logInfo(this.getClass(), "order payed");
     }

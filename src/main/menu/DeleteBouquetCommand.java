@@ -25,6 +25,7 @@ public class DeleteBouquetCommand implements Command {
         if (Integer.parseInt(params.get(0))-1 < order.getBouquets().size()) {
             order.delBouquet(Integer.parseInt(params.get(0))-1);
             System.out.println("Bouquet Deleted From Order");
+            Log.logInfo(this.getClass(), "Bouquet Deleted From Order");
         } else {
             Log.logMail("Bouquets index out of range");
             System.out.println("Error");

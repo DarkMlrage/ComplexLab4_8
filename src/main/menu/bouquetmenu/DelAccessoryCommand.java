@@ -26,8 +26,10 @@ public class DelAccessoryCommand implements Command {
         if (Integer.parseInt(params.get(0))-1 < bouquet.getAccessories().size()) {
             bouquet.getAccessories().remove(Integer.parseInt(params.get(0))-1);
             System.out.println("Accessory deleted from bouquet");
+            Log.logInfo(this.getClass(), "Accessory deleted");
         } else {
             Log.logMail("Accessories index out of range");
+            Log.logInfo(this.getClass(), "Accessories index out of range");
             System.out.println("Error");
         }
     }

@@ -1,5 +1,6 @@
 package main.menu;
 
+import main.logger.Log;
 import main.order.Order;
 import main.utils.OrderUtils;
 
@@ -19,7 +20,8 @@ public class ShowOrderCommand implements Command {
 
     @Override
     public void execute(List<String> params) {
-        System.out.println("This is your main.order");
+        System.out.println("This is your order");
+        Log.logInfo(this.getClass(), "Show Order");
         OrderUtils.showOrder(order);
     }
 

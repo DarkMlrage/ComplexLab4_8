@@ -1,6 +1,7 @@
 package main.menu.bouquetmenu;
 
 import main.bouquets.Bouquet;
+import main.logger.Log;
 import main.menu.Command;
 
 import java.util.List;
@@ -18,6 +19,7 @@ public class ShowAccessoriesCommand implements Command {
     @Override
     public void execute(List<String> params) {
         System.out.println("Accessories in your bouquet");
+        Log.logInfo(this.getClass(), "Show Accessories");
         bouquet.showAccessories();
     }
 }

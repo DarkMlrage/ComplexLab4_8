@@ -1,6 +1,7 @@
 package main.menu;
 
 import main.bouquets.Bouquet;
+import main.logger.Log;
 import main.menu.bouquetmenu.BouquetMenu;
 import main.order.Order;
 
@@ -28,7 +29,7 @@ public class AddBouquetMenuCommand implements Command {
 
         menu = new BouquetMenu(obj);
         Scanner scanner = new Scanner(System.in);
-
+        Log.logInfo(this.getClass(), "Bouquet created");
         System.out.println(" _Create your bouquet_ ");
         while (true) {
             System.out.println(" Input your command: ");

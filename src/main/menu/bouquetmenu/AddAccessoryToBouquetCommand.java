@@ -1,6 +1,7 @@
 package main.menu.bouquetmenu;
 
 import main.bouquets.Bouquet;
+import main.logger.Log;
 import main.menu.Command;
 import main.utils.BouquetUtils;
 
@@ -27,6 +28,7 @@ public class AddAccessoryToBouquetCommand implements Command {
         if (params.size() == 2) {
             BouquetUtils.addAccessoryToBouquet(bouquet, params.get(0), params.get(1));
             System.out.println("Accessory added to bouquet");
+            Log.logInfo(this.getClass(), "Accessory added");
         } else {
             System.out.println("Wrong parameters added");
         }
