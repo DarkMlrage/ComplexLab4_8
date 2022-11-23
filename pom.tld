@@ -1,9 +1,4 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <!--  This module was also published with a richer model, Gradle metadata,   -->
-    <!--  which should be used instead. Do not delete the following line which   -->
-    <!--  is to indicate to Gradle or any Gradle module metadata file consumer   -->
-    <!--  that they should prefer consuming it instead.  -->
-    <!--  do_not_remove: published-with-gradle-metadata  -->
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-engine</artifactId>
@@ -11,24 +6,18 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
                 <configuration>
-                    <source>14</source>
-                    <target>14</target>
+                    <mainClass>main.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <name>JUnit Jupiter Engine</name>
-    <description>Module "junit-jupiter-engine" of JUnit 5.</description>
-    <url>https://junit.org/junit5/</url>
-    <licenses>
-        <license>
-            <name>Eclipse Public License v2.0</name>
-            <url>https://www.eclipse.org/legal/epl-v20.html</url>
-        </license>
-    </licenses>
+    <properties>
+        <maven.compiler.source>18</maven.compiler.source>
+        <maven.compiler.target>18</maven.compiler.target>
+    </properties>
 
     <scm>
         <connection>scm:git:git://github.com/junit-team/junit5.git</connection>
@@ -64,6 +53,17 @@
             <groupId>com.sun.mail</groupId>
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>19</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>19</version>
         </dependency>
 
         <dependency>
