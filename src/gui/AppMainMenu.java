@@ -12,10 +12,11 @@ import java.util.Objects;
 
 public class AppMainMenu extends Application {
     private Stage primaryStage;
+    private MainMenu mainMenu = new MainMenu();
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Help");
+        this.primaryStage.setTitle("FlowerAPP");
         initRootLayout();
     }
     public void initRootLayout(){
@@ -28,6 +29,9 @@ public class AppMainMenu extends Application {
             e.printStackTrace();
         }
 
+    }
+    public Stage getPrimaryStage() {
+        return primaryStage;
     }
     public static void main(String[] args) {
         launch(args);
