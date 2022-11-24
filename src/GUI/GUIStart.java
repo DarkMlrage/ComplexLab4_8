@@ -1,4 +1,6 @@
-package main;
+package GUI;
+
+import main.Main;
 
 public class GUIStart {
 
