@@ -11,27 +11,20 @@ import org.apache.log4j.PropertyConfigurator;
 
 import java.util.*;
 
-public class Main extends Application {
-    @Override
-    public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainMenu.fxml")));
-        primaryStage.setTitle("Help");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+public class Main{
 
-    }
     public static void main(String[] args) {
-        launch(args);
-//        PropertyConfigurator.configure("log4j.properties");
-//
-//        Scanner scanner = new Scanner(System.in);
-//
-//        MainMenu mainMenu = new MainMenu();
-//        while (true) {
-//            System.out.println("  __ Main Menu __");
-//            System.out.println("Input your command: ");
-//            List<String> command = new ArrayList<>(Arrays.asList(scanner.nextLine().split(" ")));
-//            mainMenu.execute(command);
-//        }
+
+        PropertyConfigurator.configure("log4j.properties");
+
+        Scanner scanner = new Scanner(System.in);
+
+        MainMenu mainMenu = new MainMenu();
+        while (true) {
+            System.out.println("  __ Main Menu __");
+            System.out.println("Input your command: ");
+            List<String> command = new ArrayList<>(Arrays.asList(scanner.nextLine().split(" ")));
+            mainMenu.execute(command);
+        }
     }
 }
