@@ -1,11 +1,5 @@
 package main;
 
-import javafx.application.Application;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-import javafx.fxml.FXMLLoader;
-
 import main.menu.MainMenu;
 import org.apache.log4j.PropertyConfigurator;
 
