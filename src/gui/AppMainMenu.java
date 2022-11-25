@@ -13,14 +13,10 @@ public class AppMainMenu extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (Exception e){
-            e.printStackTrace();
-        }
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) {
