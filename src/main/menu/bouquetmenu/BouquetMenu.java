@@ -1,7 +1,8 @@
 package main.menu.bouquetmenu;
 
 import main.bouquets.Bouquet;
-import main.menu.*;
+import main.menu.Command;
+import main.menu.MainMenu;
 
 import java.util.HashMap;
 
