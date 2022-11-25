@@ -10,27 +10,19 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class AppMainMenu extends Application {
-    protected static Stage primaryStage;
-    @Override
-    public void start(Stage primaryStage) {
-        AppMainMenu.primaryStage = primaryStage;
-        AppMainMenu.primaryStage.setTitle("FlowerAPP");
-        initRootLayout();
-    }
-    public static void initRootLayout(){
-        try{
-            Parent root = FXMLLoader.load(Objects.requireNonNull(AppMainMenu.class.getResource("AppMainMenu.fxml")));
-            primaryStage.setScene(new Scene(root));
-            primaryStage.show();
 
-        } catch (IOException e){
+    @Override
+    public void start(Stage stage) throws IOException {
+        try {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e){
             e.printStackTrace();
         }
+    }
 
-    }
-    public static Stage getPrimaryStage() {
-        return primaryStage;
-    }
     public static void main(String[] args) {
         launch(args);
     }

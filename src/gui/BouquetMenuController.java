@@ -11,18 +11,18 @@ import main.utils.BouquetUtils;
 import java.io.IOException;
 import java.util.Objects;
 
-public class BouquetMenuController {
-    protected Bouquet bouquet;
-
-    public BouquetMenuController(Bouquet bouquet){
-        this.bouquet=bouquet;
-    }
-    public void showScene() throws IOException {
-        AppMainMenu.getPrimaryStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")))));
-    }
-    public void addFlowers(ActionEvent e) throws IOException {
-        AddFlowersController addFlowersController = new AddFlowersController(bouquet);
-        addFlowersController.showScene();
-    }
-
-}
+//public class BouquetMenuController {
+//    protected Bouquet bouquet;
+//
+//    public BouquetMenuController(Bouquet bouquet){
+//        this.bouquet=bouquet;
+//    }
+//    public void showScene() throws IOException {
+//        AppMainMenu.getPrimaryStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")))));
+//    }
+//    public void addFlowers(ActionEvent e) throws IOException {
+//        AddFlowersController addFlowersController = new AddFlowersController(bouquet);
+//        addFlowersController.showScene();
+//    }
+//
+//}
