@@ -19,7 +19,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class MainMenuController /*implements Initializable */{
+public class MainMenuController implements Initializable {
     protected Order order = new Order();
     protected Bouquet bouquet;
 
@@ -48,23 +48,23 @@ public class MainMenuController /*implements Initializable */{
     }
 
 
-//    @FXML
-//    private ChoiceBox<String> flowerChoiceBox;
-//    @FXML
-//    private TextField count;
-//    private String[] flowers = {"redrose", "whiterose", "yellowtulip", "blacktulip"};
+    @FXML
+    private ChoiceBox<String> flowerChoiceBox = new ChoiceBox<>();
+    @FXML
+    private TextField count = new TextField();
+    private String[] flowers = {"redrose", "whiterose", "yellowtulip", "blacktulip"};
     public void addFlowersButton(ActionEvent e) throws IOException {
         AppMainMenu.getPrimaryStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addFlowers.fxml")))));
     }
     public void addFlowers(ActionEvent e){
-        //BouquetUtils.addFlowersToBouquet(bouquet, flowerChoiceBox.getValue(), Integer.parseInt(count.getText()));
+        BouquetUtils.addFlowersToBouquet(this.bouquet, flowerChoiceBox.getValue(), Integer.parseInt(count.getText()));
     }
     public void backToBouquet(ActionEvent e) throws IOException {
         AppMainMenu.getPrimaryStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")))));
     }
-//
-//    @Override
-//    public void initialize(URL url, ResourceBundle resourceBundle) {
-//        flowerChoiceBox.getItems().addAll(flowers);
-//    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        flowerChoiceBox.getItems().addAll(flowers);
+    }
 }
