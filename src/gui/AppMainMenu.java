@@ -17,9 +17,9 @@ public class AppMainMenu extends Application {
         this.primaryStage.setTitle("FlowerAPP");
         initRootLayout();
     }
-    public void initRootLayout(){
+    public static void initRootLayout(){
         try{
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(AppMainMenu.class.getResource("AppMainMenu.fxml")));
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
 
