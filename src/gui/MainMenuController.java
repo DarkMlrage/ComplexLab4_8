@@ -2,6 +2,7 @@ package gui;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
+
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,17 +18,12 @@ public class MainMenuController {
     private Stage stage;
     private Scene scene;
     private Parent root;
+
     public void addBouquet(ActionEvent e) throws IOException {
         Bouquet obj = new Bouquet();
-        new BouquetMenuController(obj);
-        root = FXMLLoader.load((getClass().getResource("bouquetMenu.fxml")));
-        stage = (Stage)((Node)e.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-        //BouquetMenuController bouquetMenuController = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")));
-        //AppMainMenu.getPrimaryStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")))));
-        //order.addBouquet(obj);
+
+
+        order.addBouquet(obj);
     }
     public void deleteBouquet(ActionEvent e) throws IOException {
         //order.delBouquet(0);
