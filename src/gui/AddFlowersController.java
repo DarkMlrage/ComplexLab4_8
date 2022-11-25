@@ -1,5 +1,10 @@
 package gui;
 
+import main.bouquets.Bouquet;
+
 public class AddFlowersController {
-    //@FXML
+    protected Bouquet bouquet;
+    AddFlowersController(Bouquet bouquet){
+        this.bouquet=bouquet;
+    }
 }
