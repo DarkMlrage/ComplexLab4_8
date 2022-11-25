@@ -6,7 +6,7 @@
 
 <AnchorPane prefHeight="567.0" prefWidth="682.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuController">
    <children>
-      <Button layoutX="309.0" layoutY="473.0" mnemonicParsing="false" onAction="#back" text="Back">
+      <Button layoutX="309.0" layoutY="473.0" mnemonicParsing="false" onAction="#backToMain" text="Back">
          <font>
             <Font size="19.0" />
          </font>
