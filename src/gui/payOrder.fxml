@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="339.0" prefWidth="533.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.mainMenuController">
+<AnchorPane prefHeight="339.0" prefWidth="533.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuController">
    <children>
       <TextField layoutX="155.0" layoutY="116.0" promptText="Input your card number">
          <font>

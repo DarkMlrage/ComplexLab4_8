@@ -13,8 +13,8 @@ public class AppMainMenu extends Application {
     protected static Stage primaryStage;
     @Override
     public void start(Stage primaryStage) {
-        this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("FlowerAPP");
+        AppMainMenu.primaryStage = primaryStage;
+        AppMainMenu.primaryStage.setTitle("FlowerAPP");
         initRootLayout();
     }
     public static void initRootLayout(){
