@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.bouquets.Bouquet;
 import main.order.Order;
@@ -52,12 +53,14 @@ public class MainMenuController implements Initializable {
 
     @FXML
     private ChoiceBox<String> flowerChoiceBox;
+    @FXML
+    private TextField count;
     private String[] flowers = {"redrose", "whiterose", "yellowtulip", "blacktulip"};
     public void addFlowersButton(ActionEvent e) throws IOException {
         AppMainMenu.getPrimaryStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addFlowers.fxml")))));
     }
     public void addFlowers(ActionEvent e){
-        BouquetUtils.addFlowersToBouquet(bouquet, flowerChoiceBox.getValue(), );
+        BouquetUtils.addFlowersToBouquet(bouquet, flowerChoiceBox.getValue(), Integer.parseInt(count.getText()));
     }
     public void backToBouquet(ActionEvent e) throws IOException {
         AppMainMenu.getPrimaryStage().setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")))));
