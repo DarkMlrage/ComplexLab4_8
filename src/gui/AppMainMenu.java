@@ -5,14 +5,12 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import main.menu.MainMenu;
 
 import java.io.IOException;
 import java.util.Objects;
 
 public class AppMainMenu extends Application {
-    private Stage primaryStage;
-    private MainMenu mainMenu = new MainMenu();
+    protected static Stage primaryStage;
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
@@ -21,7 +19,7 @@ public class AppMainMenu extends Application {
     }
     public void initRootLayout(){
         try{
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainMenu.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
             primaryStage.setScene(new Scene(root));
             primaryStage.show();
 
@@ -30,7 +28,7 @@ public class AppMainMenu extends Application {
         }
 
     }
-    public Stage getPrimaryStage() {
+    public static Stage getPrimaryStage() {
         return primaryStage;
     }
     public static void main(String[] args) {
