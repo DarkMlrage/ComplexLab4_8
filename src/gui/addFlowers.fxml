@@ -20,12 +20,12 @@
             <Font size="20.0" />
          </font>
       </Button>
-      <Button layoutX="263.0" layoutY="231.0" mnemonicParsing="false" text="ADD">
+      <Button layoutX="263.0" layoutY="231.0" mnemonicParsing="false" onAction="#addFlowers" text="ADD">
          <font>
             <Font size="21.0" />
          </font>
       </Button>
-      <TextField layoutX="200.0" layoutY="183.0" promptText="Input count of flowers">
+      <TextField fx:id="count" layoutX="200.0" layoutY="183.0" promptText="Input count of flowers">
          <font>
             <Font size="16.0" />
          </font>
