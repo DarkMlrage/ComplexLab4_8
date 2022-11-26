@@ -4,7 +4,6 @@
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 <AnchorPane prefHeight="430.0" prefWidth="555.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuController">
    <children>
       <ListView fx:id="accessoriesListView" layoutX="43.0" layoutY="29.0" prefHeight="286.0" prefWidth="343.0" />
