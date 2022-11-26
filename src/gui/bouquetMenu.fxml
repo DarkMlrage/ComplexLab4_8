@@ -11,7 +11,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="191.0" layoutY="101.0" mnemonicParsing="false" text="Add Accessory">
+      <Button layoutX="191.0" layoutY="101.0" mnemonicParsing="false" onAction="#addAccessoryButton" text="Add Accessory">
          <font>
             <Font size="19.0" />
          </font>

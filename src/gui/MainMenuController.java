@@ -21,15 +21,15 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
-    protected Order order = new Order();
-    protected Bouquet bouquet;
+    static Order order = new Order();
+    static Bouquet bouquet;
     private Parent root;
     private Stage stage;
     private Scene scene;
 
     public void addBouquet(ActionEvent e) throws IOException {
-        this.bouquet = new Bouquet();
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")));;
+        MainMenuController.bouquet = new Bouquet();
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -57,12 +57,15 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
     public void cancelOrder(ActionEvent e) {
-        this.order=new Order();
+        MainMenuController.order = new Order();
     }
     public void exit(ActionEvent e) {
         System.exit(0);
     }
     public void backToMain(ActionEvent e) throws IOException {
+        if(MainMenuController.bouquet != null){
+            MainMenuController.order.addBouquet(MainMenuController.bouquet);
+        }
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -72,7 +75,7 @@ public class MainMenuController implements Initializable {
 
 
 
-
+    //  ADD FLOWERS
     @FXML
     private ChoiceBox<String> flowerChoiceBox = new ChoiceBox<>();
     @FXML
@@ -86,7 +89,7 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
     public void addFlowers(ActionEvent e){
-        BouquetUtils.addFlowersToBouquet(bouquet, flowerChoiceBox.getValue(), Integer.parseInt(count.getText()));
+        BouquetUtils.addFlowersToBouquet(MainMenuController.bouquet, flowerChoiceBox.getValue(), Integer.parseInt(count.getText()));
     }
     public void backToBouquet(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")));
@@ -96,8 +99,29 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
 
+    //  ADD ACCESSORY
+    @FXML
+    private ChoiceBox<String> colorChoiceBox = new ChoiceBox<>();
+    private final String[] colors= {"red", "white", "silver", "gold"};
+    public void addAccessoryButton(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("addAccessory.fxml")));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void addBow(ActionEvent e){
+        BouquetUtils.addAccessoryToBouquet(MainMenuController.bouquet, "bow", colorChoiceBox.getValue());
+    }
+    public void addStrip(ActionEvent e){
+        BouquetUtils.addAccessoryToBouquet(MainMenuController.bouquet, "strip", colorChoiceBox.getValue());
+    }
+    public void addFoil(ActionEvent e){
+        BouquetUtils.addAccessoryToBouquet(MainMenuController.bouquet, "foil", colorChoiceBox.getValue());
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         flowerChoiceBox.getItems().addAll(flowers);
+        colorChoiceBox.getItems().addAll(colors);
     }
 }

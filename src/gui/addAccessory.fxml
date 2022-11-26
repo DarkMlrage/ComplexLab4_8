@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuController">
+   <children>
+      <Button layoutX="118.0" layoutY="164.0" mnemonicParsing="false" onAction="#addBow" text="Bow">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="259.0" layoutY="164.0" mnemonicParsing="false" onAction="#addFoil" text="Foil">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="393.0" layoutY="164.0" mnemonicParsing="false" onAction="#addStrip" text="Strip">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="254.0" layoutY="290.0" mnemonicParsing="false" onAction="#backToBouquet" text="Back" textFill="RED">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <ChoiceBox fx:id="colorChoiceBox" layoutX="225.0" layoutY="85.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
