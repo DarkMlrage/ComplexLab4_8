@@ -13,6 +13,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import main.accessories.Accessory;
 import main.bouquets.Bouquet;
 import main.flowers.Flower;
 import main.order.Order;
@@ -134,6 +135,16 @@ public class MainMenuController implements Initializable {
         stage.show();
     }
 
+    //  SHOW ACCESSORIES
+    @FXML
+    private ListView<Accessory> accessoriesListView = new ListView<>();
+    public void showAccessoriesButton(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("showFlowers.fxml")));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 
 
@@ -148,5 +159,6 @@ public class MainMenuController implements Initializable {
         flowerChoiceBox.getItems().addAll(flowers);
         colorChoiceBox.getItems().addAll(colors);
         flowerListView.getItems().addAll(bouquet.getFlowers());
+        accessoriesListView.getItems().addAll(bouquet.getAccessories());
     }
 }

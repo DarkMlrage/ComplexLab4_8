@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="567.0" prefWidth="527.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuController">
+<AnchorPane prefHeight="452.0" prefWidth="527.0" style="-fx-background-color: #191970;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainMenuController">
    <children>
       <Button layoutX="200.0" layoutY="43.0" mnemonicParsing="false" onAction="#addFlowersButton" text="Add Flowers">
          <font>
@@ -31,17 +31,12 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="179.0" layoutY="320.0" mnemonicParsing="false" text="Show Accessories">
+      <Button layoutX="179.0" layoutY="320.0" mnemonicParsing="false" onAction="#showAccessoriesButton" text="Show Accessories">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="138.0" layoutY="375.0" mnemonicParsing="false" text="Find Flower by Stalk Length">
-         <font>
-            <Font size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="234.0" layoutY="429.0" mnemonicParsing="false" onAction="#backToMain" text="Back">
+      <Button layoutX="234.0" layoutY="379.0" mnemonicParsing="false" onAction="#backToMain" text="Back">
          <font>
             <Font size="19.0" />
          </font>
