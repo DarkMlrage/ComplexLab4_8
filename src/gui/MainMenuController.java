@@ -20,6 +20,7 @@ import main.utils.BouquetUtils;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Collection;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -44,6 +45,13 @@ public class MainMenuController implements Initializable {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    @FXML
+    private ListView<Bouquet> bouquetListView = new ListView<>();
+    public void deleteBouquet(ActionEvent e){
+        int selectedIndx = bouquetListView.getSelectionModel().getSelectedIndex();
+        bouquetListView.getItems().remove(selectedIndx);
+        order.getBouquets().remove(selectedIndx);
     }
     public void showOrder(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("showOrder.fxml")));
@@ -175,5 +183,6 @@ public class MainMenuController implements Initializable {
         colorChoiceBox.getItems().addAll(colors);
         flowerListView.getItems().addAll(bouquet.getFlowers());
         accessoriesListView.getItems().addAll(bouquet.getAccessories());
+        bouquetListView.getItems().addAll((Collection<? extends Bouquet>) order.getBouquets());
     }
 }

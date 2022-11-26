@@ -8,17 +8,19 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class OrderUtils {
     public static void showOrder(Order order) {
         System.out.println("Total Cost: " + order.getCost());
         System.out.println("Bouquets: ");
-        HashMap<Integer, Bouquet> bouquets = order.getBouquets();
+        List<Bouquet> bouquets = order.getBouquets();
         for (int i = 1; i <= bouquets.size(); i++) {
-            System.out.println("Bouquet: " + bouquets.get(i).getName());
-            System.out.println("Cost: " + bouquets.get(i).getCost());
+            System.out.println("Bouquet: " + bouquets.get(i-1).getName());
+            System.out.println("Cost: " + bouquets.get(i-1).getCost());
         }
     }
 
@@ -29,9 +31,9 @@ public class OrderUtils {
             fw.write("Card Number: " + order.getCardNumber());
             fw.write("\nBouquets: ");
             for (int i = 1; i <= order.getBouquets().size(); i++) {
-                fw.write("Bouquet: " + order.getBouquets().get(i).getName());
+                fw.write("Bouquet: " + order.getBouquets().get(i-1).getName());
 
-                fw.write("Cost: " + order.getBouquets().get(i).getCost());
+                fw.write("Cost: " + order.getBouquets().get(i-1).getCost());
             }
             fw.write("\nTotal Cost: " + order.getCost());
             fw.close();
@@ -49,7 +51,7 @@ public class OrderUtils {
 
     public static void cancelOrder(Order order){
         order.setCost(0);
-        order.setBouquets(new HashMap<>());
+        order.setBouquets(new ArrayList<>());
     }
 
     public static void saveOrder(Order order){
@@ -57,8 +59,8 @@ public class OrderUtils {
         StringBuilder text = new StringBuilder("\nCard Number: " + order.getCardNumber() + "\nBouquets: ");
 
         for (int i = 1; i <= order.getBouquets().size(); i++) {
-            text.append("Bouquet: ").append(order.getBouquets().get(i).getName());
-            text.append("\nCost: ").append(order.getBouquets().get(i).getCost()).append("\n");
+            text.append("Bouquet: ").append(order.getBouquets().get(i-1).getName());
+            text.append("\nCost: ").append(order.getBouquets().get(i-1).getCost()).append("\n");
         }
 
         try {

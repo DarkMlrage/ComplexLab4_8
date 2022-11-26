@@ -1,2 +1,16 @@
 2022-11-14 22:27:52 INFO  AddBouquetMenuCommand:8 - Bouquet created
 2022-11-14 22:28:01 INFO  ExitCommand:8 - Exit
+2022-11-26 20:08:07 INFO  AddBouquetMenuCommand:8 - Bouquet created
+2022-11-26 20:08:14 INFO  AddFlowersToBouquetCommand:8 - Flowers added
+2022-11-26 20:08:18 INFO  ShowFlowersCommand:8 - Show Flowers
+2022-11-26 20:08:28 INFO  ShowOrderCommand:8 - Show Order
+2022-11-26 20:09:11 INFO  AddBouquetMenuCommand:8 - Bouquet created
+2022-11-26 20:09:19 INFO  AddFlowersToBouquetCommand:8 - Flowers added
+2022-11-26 20:09:25 INFO  ShowOrderCommand:8 - Show Order
+2022-11-26 20:10:19 INFO  AddBouquetMenuCommand:8 - Bouquet created
+2022-11-26 20:12:34 INFO  AddFlowersToBouquetCommand:8 - Flowers added
+2022-11-26 20:12:39 INFO  ShowOrderCommand:8 - Show Order
+2022-11-26 20:15:10 INFO  AddBouquetMenuCommand:8 - Bouquet created
+2022-11-26 20:15:16 INFO  AddFlowersToBouquetCommand:8 - Flowers added
+2022-11-26 20:15:23 INFO  PayOrderCommand:8 - Order payed, Check gived, Order saved, Order canceled
+2022-11-26 20:15:23 INFO  PayOrderCommand:8 - order payed

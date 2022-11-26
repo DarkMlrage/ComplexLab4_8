@@ -2,21 +2,23 @@ package main.order;
 
 import main.bouquets.Bouquet;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 
 public class Order {
 
     private double cost;
-    protected HashMap<Integer, Bouquet> bouquets;
+    protected List<Bouquet> bouquets;
     private String cardNumber;
 
     public Order() {
-        bouquets = new HashMap<>();
+        bouquets = new ArrayList<>();
     }
 
     public void addBouquet(Bouquet bouquet) {
-        bouquets.put(bouquets.size() + 1, bouquet);
+        bouquets.add(bouquet);
         this.cost += bouquet.getCost();
     }
 
@@ -28,7 +30,7 @@ public class Order {
         this.cost = cost;
     }
 
-    public void setBouquets(HashMap<Integer, Bouquet> bouquets) {
+    public void setBouquets(List<Bouquet> bouquets) {
         this.bouquets = bouquets;
     }
 
@@ -36,7 +38,7 @@ public class Order {
         return cost;
     }
 
-    public HashMap<Integer, Bouquet> getBouquets() {
+    public List<Bouquet> getBouquets() {
         return bouquets;
     }
 
