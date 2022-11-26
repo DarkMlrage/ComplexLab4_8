@@ -9,9 +9,12 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.bouquets.Bouquet;
+import main.flowers.Flower;
 import main.order.Order;
 import main.utils.BouquetUtils;
 
@@ -22,7 +25,7 @@ import java.util.ResourceBundle;
 
 public class MainMenuController implements Initializable {
     static Order order = new Order();
-    static Bouquet bouquet;
+    static Bouquet bouquet = new Bouquet();
     private Parent root;
     private Stage stage;
     private Scene scene;
@@ -119,9 +122,31 @@ public class MainMenuController implements Initializable {
     public void addFoil(ActionEvent e){
         BouquetUtils.addAccessoryToBouquet(MainMenuController.bouquet, "foil", colorChoiceBox.getValue());
     }
+
+    //  SHOW FLOWERS
+    @FXML
+    private ListView<Flower> flowerListView = new ListView<>();
+    public void showFlowersButton(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("showFlowers.fxml")));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+
+
+
+
+
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         flowerChoiceBox.getItems().addAll(flowers);
         colorChoiceBox.getItems().addAll(colors);
+        flowerListView.getItems().addAll(bouquet.getFlowers());
     }
 }

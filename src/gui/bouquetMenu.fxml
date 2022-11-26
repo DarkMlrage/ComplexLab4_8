@@ -26,7 +26,7 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="195.0" layoutY="264.0" mnemonicParsing="false" text="Show Flowers">
+      <Button layoutX="195.0" layoutY="264.0" mnemonicParsing="false" onAction="#showFlowersButton" text="Show Flowers">
          <font>
             <Font size="19.0" />
          </font>
