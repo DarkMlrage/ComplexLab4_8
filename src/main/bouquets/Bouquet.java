@@ -61,4 +61,8 @@ public class Bouquet {
     public String getName() {
         return this.name;
     }
+    @Override
+    public String toString() {
+        return "Bouquet:" + name;
+    }
 }
