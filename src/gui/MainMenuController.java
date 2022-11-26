@@ -10,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import main.accessories.Accessory;
@@ -39,7 +38,7 @@ public class MainMenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-    public void deleteBouquet(ActionEvent e) throws IOException {
+    public void deleteBouquetButton(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteBouquet.fxml")));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -67,18 +66,12 @@ public class MainMenuController implements Initializable {
         System.exit(0);
     }
     public void backToMain(ActionEvent e) throws IOException {
-        if(MainMenuController.bouquet != null){
-            MainMenuController.order.addBouquet(MainMenuController.bouquet);
-        }
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-
-
-
     //  ADD FLOWERS
     @FXML
     private ChoiceBox<String> flowerChoiceBox = new ChoiceBox<>();
@@ -102,7 +95,6 @@ public class MainMenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
     //  ADD ACCESSORY
     @FXML
     private ChoiceBox<String> colorChoiceBox = new ChoiceBox<>();
@@ -123,7 +115,6 @@ public class MainMenuController implements Initializable {
     public void addFoil(ActionEvent e){
         BouquetUtils.addAccessoryToBouquet(MainMenuController.bouquet, "foil", colorChoiceBox.getValue());
     }
-
     //  SHOW FLOWERS
     @FXML
     private ListView<Flower> flowerListView = new ListView<>();
@@ -134,7 +125,6 @@ public class MainMenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
     //  SHOW ACCESSORIES
     @FXML
     private ListView<Accessory> accessoriesListView = new ListView<>();
@@ -145,7 +135,6 @@ public class MainMenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
-
     // DELETE FLOWER
     public void deleteFlowerButton(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("deleteFlower.fxml")));
@@ -159,7 +148,6 @@ public class MainMenuController implements Initializable {
         flowerListView.getItems().remove(selectedIndx);
         bouquet.getFlowers().remove(selectedIndx);
     }
-
     // DELETE ACCESSORY
     public void deleteAccessoryButton(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("deleteAccessory.fxml")));
@@ -173,12 +161,14 @@ public class MainMenuController implements Initializable {
         accessoriesListView.getItems().remove(selectedIndx);
         bouquet.getAccessories().remove(selectedIndx);
     }
-
-
-
-
-
-
+    public void backToMainFromBouquet(ActionEvent e) throws IOException {
+        MainMenuController.order.addBouquet(MainMenuController.bouquet);
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("AppMainMenu.fxml")));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         flowerChoiceBox.getItems().addAll(flowers);
