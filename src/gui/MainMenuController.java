@@ -139,15 +139,40 @@ public class MainMenuController implements Initializable {
     @FXML
     private ListView<Accessory> accessoriesListView = new ListView<>();
     public void showAccessoriesButton(ActionEvent e) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("showFlowers.fxml")));
+        root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("showAccessories.fxml")));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
+    // DELETE FLOWER
+    public void deleteFlowerButton(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("deleteFlower.fxml")));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void deleteFlower(){
+        int selectedIndx = flowerListView.getSelectionModel().getSelectedIndex();
+        flowerListView.getItems().remove(selectedIndx);
+        bouquet.getFlowers().remove(selectedIndx);
+    }
 
-
+    // DELETE ACCESSORY
+    public void deleteAccessoryButton(ActionEvent e) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(this.getClass().getResource("deleteAccessory.fxml")));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void deleteAccessory(){
+        int selectedIndx = accessoriesListView.getSelectionModel().getSelectedIndex();
+        accessoriesListView.getItems().remove(selectedIndx);
+        bouquet.getAccessories().remove(selectedIndx);
+    }
 
 
 

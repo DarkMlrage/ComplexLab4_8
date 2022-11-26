@@ -16,12 +16,12 @@
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="195.0" layoutY="154.0" mnemonicParsing="false" text="Delete Flower">
+      <Button layoutX="195.0" layoutY="154.0" mnemonicParsing="false" onAction="#deleteFlowerButton" text="Delete Flower">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="181.0" layoutY="209.0" mnemonicParsing="false" text="Delete Accessory">
+      <Button layoutX="181.0" layoutY="209.0" mnemonicParsing="false" onAction="#deleteAccessoryButton" text="Delete Accessory">
          <font>
             <Font size="19.0" />
          </font>
