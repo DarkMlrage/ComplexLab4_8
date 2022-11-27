@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class SQLDatabaseConnection {
-    private static final String url = "jdbc:postgresql://localhost/Cursova";
+    private static final String url = "jdbc:postgresql://localhost/cursova";
     private static final String user = "postgres";
     private static final String password = "1";
     // Connect to your database.

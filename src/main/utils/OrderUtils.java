@@ -8,6 +8,10 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -54,19 +58,37 @@ public class OrderUtils {
     }
 
     public static void saveOrder(Order order){
-        String filePath = "C:\\1D\\University Projects\\ComplexLab4_8\\OrdersDB.txt";
-        StringBuilder text = new StringBuilder("\nCard Number: " + order.getCardNumber() + "\nBouquets: ");
-
-        for (int i = 1; i <= order.getBouquets().size(); i++) {
-            text.append("Bouquet: ").append(order.getBouquets().get(i-1).getName());
-            text.append("\nCost: ").append(order.getBouquets().get(i-1).getCost()).append("\n");
-        }
-
+//        String filePath = "C:\\1D\\University Projects\\ComplexLab4_8\\OrdersDB.txt";
+//        StringBuilder text = new StringBuilder("\nCard Number: " + order.getCardNumber() + "\nBouquets: ");
+//
+//        for (int i = 1; i <= order.getBouquets().size(); i++) {
+//            text.append("Bouquet: ").append(order.getBouquets().get(i-1).getName());
+//            text.append("\nCost: ").append(order.getBouquets().get(i-1).getCost()).append("\n");
+//        }
+//
+//        try {
+//            Files.write(Paths.get(filePath), text.toString().getBytes(), StandardOpenOption.APPEND);
+//        }
+//        catch (IOException e) {
+//            System.out.println(e);
+//        }
+        String url = "jdbc:postgresql://localhost/cursova";
+        String user = "postgres";
+        String password = "1";
+        Connection conn = null;
         try {
-            Files.write(Paths.get(filePath), text.toString().getBytes(), StandardOpenOption.APPEND);
+            conn = DriverManager.getConnection(url, user, password);
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
         }
-        catch (IOException e) {
-            System.out.println(e);
+        try {
+            assert conn != null;
+            Statement statement = conn.createStatement();
+            statement.executeUpdate(String.format("insert into orders (cost, card_num) values ('%s', '%s')", order.getCost(), order.getCardNumber()));
+            conn.close();
+        } catch (SQLException exception) {
+            System.out.println("Connection to database failed, contact with admin");
+            exception.printStackTrace();
         }
     }
 }
