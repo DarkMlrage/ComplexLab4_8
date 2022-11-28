@@ -4,16 +4,13 @@ import main.bouquets.Bouquet;
 import main.logger.Log;
 import main.menu.Command;
 import main.utils.BouquetUtils;
-
 import java.util.List;
 
 public class AddFlowersToBouquetCommand implements Command {
     private final Bouquet bouquet;
-
     public AddFlowersToBouquetCommand(Bouquet bouquet) {
         this.bouquet = bouquet;
     }
-
     @Override
     public String getKey(){
         return "add_flowers";

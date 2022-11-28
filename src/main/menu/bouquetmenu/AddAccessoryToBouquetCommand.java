@@ -4,21 +4,17 @@ import main.bouquets.Bouquet;
 import main.logger.Log;
 import main.menu.Command;
 import main.utils.BouquetUtils;
-
 import java.util.List;
 
 public class AddAccessoryToBouquetCommand implements Command {
     private final Bouquet bouquet;
-
     public AddAccessoryToBouquetCommand(Bouquet bouquet) {
         this.bouquet = bouquet;
     }
-
     @Override
     public String getKey(){
         return "add_accessory";
     }
-
     @Override
     public String getParams(){
         return " 'type' 'color'";
@@ -32,6 +28,5 @@ public class AddAccessoryToBouquetCommand implements Command {
         } else {
             System.out.println("Wrong parameters added");
         }
-
     }
 }

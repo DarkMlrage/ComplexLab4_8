@@ -3,12 +3,10 @@ package main.menu.bouquetmenu;
 import main.bouquets.Bouquet;
 import main.logger.Log;
 import main.menu.Command;
-
 import java.util.List;
 
 public class ShowAccessoriesCommand implements Command {
     private final Bouquet bouquet;
-
     public ShowAccessoriesCommand(Bouquet bouquet) {
         this.bouquet = bouquet;
     }

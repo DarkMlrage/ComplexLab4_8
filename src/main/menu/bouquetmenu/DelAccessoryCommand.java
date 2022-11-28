@@ -3,16 +3,13 @@ package main.menu.bouquetmenu;
 import main.bouquets.Bouquet;
 import main.logger.Log;
 import main.menu.Command;
-
 import java.util.List;
 
 public class DelAccessoryCommand implements Command {
     private final Bouquet bouquet;
-
     public DelAccessoryCommand(Bouquet bouquet) {
         this.bouquet = bouquet;
     }
-
     @Override
     public String getKey(){
         return "del_accessory";

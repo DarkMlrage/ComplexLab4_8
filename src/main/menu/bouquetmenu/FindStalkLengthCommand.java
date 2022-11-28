@@ -4,16 +4,13 @@ import main.bouquets.Bouquet;
 import main.logger.Log;
 import main.menu.Command;
 import main.utils.BouquetUtils;
-
 import java.util.List;
 
 public class FindStalkLengthCommand implements Command {
     private final Bouquet bouquet;
-
     public FindStalkLengthCommand(Bouquet bouquet) {
         this.bouquet = bouquet;
     }
-
     @Override
     public String getKey(){
         return "find_stalk";
