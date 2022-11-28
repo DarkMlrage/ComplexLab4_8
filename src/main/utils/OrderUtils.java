@@ -2,12 +2,8 @@ package main.utils;
 
 import main.bouquets.Bouquet;
 import main.order.Order;
-
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -26,7 +22,6 @@ public class OrderUtils {
             System.out.println("Cost: " + bouquets.get(i-1).getCost());
         }
     }
-
     public static void saveCheck(Order order) {
         FileWriter fw = null;
         try {
@@ -45,19 +40,17 @@ public class OrderUtils {
         }
 
     }
-
     public static void payOrder(Order order) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введіть номер картки: ");
         order.setCardNumber(scanner.nextLine());
     }
-
     public static void cancelOrder(Order order){
         order.setCost(0);
         order.setBouquets(new ArrayList<>());
     }
-
     public static void saveOrder(Order order){
+        //FOR SAVING INTO FILE
 //        String filePath = "C:\\1D\\University Projects\\ComplexLab4_8\\OrdersDB.txt";
 //        StringBuilder text = new StringBuilder("\nCard Number: " + order.getCardNumber() + "\nBouquets: ");
 //

@@ -14,5 +14,3 @@ public class Rose extends Flower {
         return "Rose'\n" + super.toString();
     }
 }
-
-

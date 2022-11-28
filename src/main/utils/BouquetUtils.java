@@ -3,14 +3,12 @@ package main.utils;
 import main.accessories.*;
 import main.bouquets.Bouquet;
 import main.flowers.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class BouquetUtils {
     protected static List<String> flowerTypes;
-
     public static Flower createFlower(String type, Freshness freshness, int stalk) {
         switch (type) {
             case "whiterose" -> {
@@ -31,10 +29,8 @@ public class BouquetUtils {
             }
         }
     }
-
     public static void addFlowersToBouquet(Bouquet bouquet, String type, int count) {
         Scanner scanner = new Scanner(System.in);
-
         flowerTypes = new ArrayList<>();
         flowerTypes.add("whiterose");
         flowerTypes.add("redrose");
@@ -53,7 +49,6 @@ public class BouquetUtils {
             }
         }
     }
-
     public static Accessory createAccessory(String type, Color color) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
@@ -74,12 +69,10 @@ public class BouquetUtils {
             }
         }
     }
-
     public static void addAccessoryToBouquet(Bouquet bouquet, String type, String colorname) {
         Color color = Color.getColorByName(colorname);
         bouquet.addAccessory(createAccessory(type, color));
     }
-
     public static void findFlowerByStalkLength(Bouquet bouquet, int from, int to){
         List<Flower> flowers = bouquet.getFlowers();
         for (int i=0; i<flowers.size(); i++) {

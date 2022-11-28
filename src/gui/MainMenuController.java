@@ -29,7 +29,6 @@ public class MainMenuController implements Initializable {
     private Parent root;
     private Stage stage;
     private Scene scene;
-
     public void addBouquet(ActionEvent e) throws IOException {
         MainMenuController.bouquet = new Bouquet();
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("bouquetMenu.fxml")));

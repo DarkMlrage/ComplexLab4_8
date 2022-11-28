@@ -1,8 +1,6 @@
 package main.flowers;
 
 public class Tulip extends Flower {
-
-
     public Tulip(Freshness fresh, int stalk) {
         super(fresh, stalk, 32);
         switch (this.fresh) {
@@ -16,5 +14,3 @@ public class Tulip extends Flower {
         return "Tulip'\n" + super.toString();
     }
 }
-
-

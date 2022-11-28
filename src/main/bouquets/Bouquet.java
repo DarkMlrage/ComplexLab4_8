@@ -2,15 +2,12 @@ package main.bouquets;
 
 import main.accessories.Accessory;
 import main.flowers.Flower;
-
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
 public class Bouquet {
-
     private String name = " ";
-    //private double cost;
     protected List<Flower> flowers;
     protected List<Accessory> accessories;
     public Bouquet() {

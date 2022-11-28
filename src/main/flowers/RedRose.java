@@ -5,7 +5,6 @@ public class RedRose extends Rose {
         super(fresh, stalk);
         this.cost += 2;
     }
-
     @Override
     public String toString() {
         return "\n'Red " + super.toString();
