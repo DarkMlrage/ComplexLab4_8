@@ -4,12 +4,10 @@ import main.bouquets.Bouquet;
 import main.logger.Log;
 import main.menu.bouquetmenu.BouquetMenu;
 import main.order.Order;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-
 
 public class AddBouquetMenuCommand implements Command {
     private final Order order;
@@ -17,12 +15,10 @@ public class AddBouquetMenuCommand implements Command {
     public AddBouquetMenuCommand(Order order) {
         this.order = order;
     }
-
     @Override
     public String getKey(){
         return "add_bouquet";
     }
-
     @Override
     public void execute(List<String> params) {
         Bouquet obj = new Bouquet();

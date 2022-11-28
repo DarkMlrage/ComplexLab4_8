@@ -1,11 +1,9 @@
 package main.menu;
 
 import main.order.Order;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 
 public class MainMenu {
     protected HashMap<String, Command> menuItems;
@@ -16,13 +14,11 @@ public class MainMenu {
         menuItems = initializeMenu();
         help = initializeHelp();
     }
-
     protected List<String> initializeHelp() {
         List<String> initialize = new ArrayList<>();
         menuItems.forEach((k, v) -> initialize.add(k + v.getParams()));
         return initialize;
     }
-
     protected HashMap<String, Command> initializeMenu() {
 
         HashMap<String, Command> items = new HashMap<>();
@@ -47,7 +43,6 @@ public class MainMenu {
 
         return items;
     }
-
     public void execute(List<String> commandWithParams) {
 
         String command = commandWithParams.get(0);

@@ -3,16 +3,13 @@ package main.menu;
 import main.logger.Log;
 import main.order.Order;
 import main.utils.OrderUtils;
-
 import java.util.List;
 
 public class PayOrderCommand implements Command {
     private final Order order;
-
     public PayOrderCommand(Order order) {
         this.order = order;
     }
-
     @Override
     public String getKey(){
         return "pay_order";

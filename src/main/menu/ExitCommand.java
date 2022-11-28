@@ -1,7 +1,6 @@
 package main.menu;
 
 import main.logger.Log;
-
 import java.util.List;
 
 public class ExitCommand implements Command {
@@ -15,5 +14,4 @@ public class ExitCommand implements Command {
         Log.logInfo(this.getClass(), "Exit");
         System.exit(0);
     }
-
 }
