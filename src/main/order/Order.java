@@ -16,7 +16,9 @@ public class Order {
         this.cost += bouquet.getCost();
     }
     public void delBouquet(int index) {
+        this.cost -= bouquets.get(index).getCost();
         bouquets.remove(index);
+
     }
     public void setCost(double cost) {
         this.cost = cost;
