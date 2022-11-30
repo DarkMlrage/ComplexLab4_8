@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import main.accessories.Accessory;
 import main.bouquets.Bouquet;
 import main.flowers.Flower;
+import main.flowers.Rose;
 import main.order.Order;
 import main.utils.BouquetUtils;
 import main.utils.OrderUtils;
@@ -37,6 +38,34 @@ public class MainMenuController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    private ChoiceBox<String> bouquetChoiceBox = new ChoiceBox<>();
+    private final String[] bouquetsStandart = {"100 and 1 rose", "night stars"};
+    public void addStandartBouquetButton(ActionEvent e) throws IOException{
+        MainMenuController.bouquet = new Bouquet();
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("standartBouquet.fxml")));
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void addStandarBouquet(ActionEvent e) {
+        switch (bouquetChoiceBox.getValue()){
+            case "100 and 1 rose" -> {
+                BouquetUtils.addFlowersToBouquet(MainMenuController.bouquet, "redrose", 100);
+                BouquetUtils.addFlowersToBouquet(MainMenuController.bouquet, "whiterose", 1);
+            }
+            case "night stars" -> {
+                BouquetUtils.addFlowersToBouquet(MainMenuController.bouquet, "blacktulip", 100);
+                BouquetUtils.addFlowersToBouquet(MainMenuController.bouquet, "yellowtulip", 1);
+            }
+            default -> {
+                BouquetUtils.addFlowersToBouquet(MainMenuController.bouquet, "yellowtulip", 0);
+            }
+        }
+    }
+
+
     public void deleteBouquetButton(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteBouquet.fxml")));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
@@ -185,6 +214,7 @@ public class MainMenuController implements Initializable {
     }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        bouquetChoiceBox.getItems().addAll(bouquetsStandart);
         flowerChoiceBox.getItems().addAll(flowers);
         colorChoiceBox.getItems().addAll(colors);
         flowerListView.getItems().addAll(bouquet.getFlowers());
