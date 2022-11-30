@@ -64,8 +64,6 @@ public class MainMenuController implements Initializable {
             }
         }
     }
-
-
     public void deleteBouquetButton(ActionEvent e) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("deleteBouquet.fxml")));
         stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
